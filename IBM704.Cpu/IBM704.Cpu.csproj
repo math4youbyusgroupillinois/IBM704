@@ -1,0 +1,75 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{781E83E8-9B3C-43B0-AEFA-20851B6824A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IBM704.Cpu</RootNamespace>
+    <AssemblyName>IBM704.Cpu</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accumulator.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="CPU.cs" />
+    <Compile Include="Enumeration.cs" />
+    <Compile Include="FloatingPointNumber.cs" />
+    <Compile Include="IndexRegisterA.cs" />
+    <Compile Include="IndexRegisterB.cs" />
+    <Compile Include="IndexRegisterC.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="InstructionLocationCounter.cs" />
+    <Compile Include="InstructionRegister.cs" />
+    <Compile Include="InstructionSet.cs" />
+    <Compile Include="IRegister.cs" />
+    <Compile Include="MultiplierQuotientRegister.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="StorageRegister.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IBM704.CoreStorage\IBM704.CoreStorage.csproj">
+      <Project>{3FB684DB-D156-48D0-9AF0-3E88F7FE2D1C}</Project>
+      <Name>IBM704.CoreStorage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IBM704.SecondaryStorage\IBM704.SecondaryStorage.csproj">
+      <Project>{5738A7FA-9E82-4E7F-B5B1-012841E16C45}</Project>
+      <Name>IBM704.SecondaryStorage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

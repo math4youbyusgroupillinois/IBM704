@@ -1,0 +1,19 @@
+This project should handle the setting and control of the front panel lights and switches. It should encompass the functionality that is mention in the
+manual under the front panel section.
+
+For Example: "Automatic-Manual Switch. Pressing the automatic-manual switch stops the calculator after it has completed the execution
+ of the instruction then being processed, unless an input-output unit is connected to the logical unit. In this case, the calculator
+ stops after the input-ouput unit in use has been disconnected. The automatic light goes out and all of the switches and the following
+ keys become effective: enter MQ, enter instruction, display storage, display effective address, display A, display B, display C, multiple step, 
+ and single step. The clear key becomes ineffective."
+ 
+Using this description it will be important to the operating state of each button and switch, i.e. Enabled or Disabled. (Possibly in a enumeration although
+a bool should work.)
+
+The automatic/manual execution of the CPU may need to be controlled via the front panel layer. It seems like the front panel will be the driving layer for
+the CPU layer. So, perhaps the CPU will contain an "Execute()" Method that will execute one instruction at a time. This could be called to immeadiately
+return control to the front panel. This will allow us to switch from automatic to manual without needing to throw an interupt at the CPU. Another possible
+way to handle this is by putting the execution on a separate thread and setting a bool to tell the CPU to stop executing. This would have the advantage of 
+keeping execution responsibility in the CPU layer. The execute needs to distinguish between single step and multistep keys.
+
+Reset and Clear should be a part of the CPU Layer

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="IBM704.FrontPanel.FrontPanel">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>FrontPanel.cs</FileName>
+      <HashCode>MUMAAAAAACgg1AEAABAAAgAADgAAACAAEEAKAANEAgE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="IBM704.FrontPanel.IndexdispSelection">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IndexdispSelection.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>
